@@ -134,3 +134,36 @@ Generated folders (`.venv`, `.npm-cache`, `__pycache__`, `.pytest_cache`) are no
 **First pass:** Read the goal and draw the data flow. **Second pass:** Follow one audio file through every backend function. **Third pass:** Follow its JSON into the browser. **Fourth pass:** Run tests and explain one failure you would expect if a guard were removed. **Fifth pass:** Change one sensitivity value, compare the report, then restore it.
 
 Keep four notes per source file: purpose, input/output, key logic/formula, and one edge case. This is more useful than memorizing every line. After each future implementation session, revise changed files first, their callers next, and relevant tests last.
+
+
+## 8. Revise the frontend refresh (14 October 2026)
+
+Read the changed files in this order:
+
+| Order | File | What changed / questions to revise |
+|---|---|---|
+| 1 | `logo.png`, `frontend/public/cadence-logo.png` | User-supplied artwork and byte-identical web copy. Why are these URLs different on GitHub, FastAPI and Next.js? The original image was not edited. |
+| 2 | `frontend/public/dashboard.css` | Charcoal/cyan design tokens, brand image framing, hero, navigation, process strip, practice room, upload states, score/profile/results, mobile breakpoints, reduced motion and loading state. Follow token -> selector -> breakpoint override. |
+| 3 | `frontend/public/dashboard.js` | `logoUrl` resolves relative to `import.meta.url`, so both entry points load the same public asset. `icon` provides local SVG interface icons. `scaffold` preserves the API's form/control IDs while replacing the presentation. |
+| 4 | `frontend/public/dashboard.js` interactions | Follow `updateFileLabel`, file/drop events, hero/empty-state actions, `setBusy`, `render`, warning disclosure, score meter, selected samples and `aria-pressed` feature buttons. Trace the existing playback/export paths afterward. |
+| 5 | `frontend/public/local.html` | Local title, description, theme color, favicon/apple icon, branded loading markup and JavaScript-disabled fallback. Assets use `/assets/` because FastAPI mounts that route. |
+| 6 | `frontend/app/layout.tsx` | Matching title/description and PNG icon metadata; Next.js serves assets at the root. |
+| 7 | `frontend/app/page.tsx` | Matching branded loading screen, then the existing shared controller mount and cleanup. |
+| 8 | `README.md` | Supplied logo, run instructions and current styling notes. |
+| 9 | `docs/task.md`, `docs/everythingyoushouldknow.md` | Current implementation/verification status and conceptual explanation. |
+
+The empty-state waveform illustration is decorative HTML/CSS and is not audio evidence. Actual report waveforms still come from decoded recordings. Fixture provenance and approximate-timing notices remain visible; important quality notes expand automatically for synthetic, approximate or weak-voicing results.
+
+Useful revision commands from the project root:
+
+```powershell
+node --check frontend/public/dashboard.js
+.\.venv\Scripts\python.exe -m pytest -q
+powershell -ExecutionPolicy Bypass -File scripts/start.ps1
+```
+
+Then review `http://127.0.0.1:8000`: navigation anchors, header/hero/footer logos, browser icon, file name display, every sample level, feature switching, warning expansion, playback/seek, transcript highlights and export. Check 390px, 680px, 820px and desktop widths, keyboard focus and reduced-motion settings.
+
+Browser verification can be rerun using `.\.venv\Scripts\python.exe -m scripts.check_dashboard` when subprocess permissions allow it. The current attempt failed before browser launch. The supplied reference URL was also unavailable, so exact reference matching and visual layout are not verified. The Next.js shell still needs `npm install`, `npm run typecheck` and `npm run build` from `frontend` when package access is available.
+
+Git handoff for this session uses the already configured `origin` and `main`: stage the changes, commit the redesign/logo integration, then `git push origin main`. No force push or remote replacement is needed.

@@ -1,3 +1,5 @@
+<p align="center"><img src="logo.png" alt="Cadence speech and sound logo" width="200"></p>
+
 # Cadence - Contrastive Speech Analytics
 
 A CPU-based prototype for Track C: compare deliveries of the **same transcript**, extract acoustic features, locate differences, and produce repeatable rubric scores with measured explanations.
@@ -20,6 +22,12 @@ Open **http://127.0.0.1:8000**. API docs: **http://127.0.0.1:8000/docs**.
 For later starts, run `powershell -ExecutionPolicy Bypass -File scripts/start.ps1`.
 On Linux/macOS, replace `.\.venv\Scripts\python.exe` with `.venv/bin/python`.
 Python 3.11 is the reference runtime. The implementation session used a virtual environment that can read existing system packages; use a clean environment for reproducible setup.
+
+## Frontend design
+
+The dashboard uses a charcoal studio layout with cyan/blue accents, editorial headings, a focused practice workspace, and local SVG interface icons. Your supplied `logo.png` appears throughout the interface; the original is preserved and its public copy is `frontend/public/cadence-logo.png`. The same design runs directly from FastAPI and in the optional Next.js shell, with no added runtime dependencies. Refresh the page to see frontend changes.
+
+The suggested Stencil Labs reference could not be fetched in the implementation environment. Exact visual matching and browser QA remain unverified; JavaScript syntax, initial markup, asset routes and the existing 17 behavioral tests pass.
 
 ## Use it
 

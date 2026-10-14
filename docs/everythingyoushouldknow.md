@@ -1,7 +1,7 @@
 # Everything You Should Know 🧠
 ## A Complete Guide to Our Speech Analytics System — Explained Simply
 
-**Last Updated**: October 12, 2026  
+**Last Updated**: October 14, 2026
 **Update Policy**: This file is updated every time we make a change to the project.
 
 ---
@@ -30,6 +30,17 @@
 The complete, current file-by-file roadmap is [CODE_REVIEW_GUIDE.md](CODE_REVIEW_GUIDE.md). It covers every source module, function, dataset artifact, frontend entry point, test, packaging file, and revision exercise. Follow that guide instead of the originally proposed file names.
 
 Read in this order: problem statement and PRD -> task tracker and README -> dataset builder/metadata/labels -> configuration and schemas -> audio/alignment/features -> classification/explanation/detection/scoring -> dataset access/pipeline/API -> shared dashboard HTML/CSS/JS -> optional Next shell -> behavioral tests/evaluation -> startup/containers -> technical PDF and demo script.
+
+
+### Frontend refresh - 14 October 2026
+
+The shared dashboard now uses a dark studio visual system: charcoal surfaces, cyan/blue accents from your supplied `logo.png`, larger editorial headings, a process strip, and a dedicated practice room. The logo appears in the navigation, hero, footer, loading screens, browser icons and README. The original file is preserved; `frontend/public/cadence-logo.png` is its byte-identical web copy. CSS frames the image without changing its pixels.
+
+Read `dashboard.css` first for the visual tokens and responsive layouts, then `dashboard.js` for `logoUrl`, SVG interface icons, the new `scaffold`, file-name feedback, loading state and result presentation. Read `local.html`, `app/layout.tsx` and `app/page.tsx` next to see how FastAPI and Next.js share the design. Section 8 of `CODE_REVIEW_GUIDE.md` provides the complete changed-file revision order and commands.
+
+Decorative signal art in the empty state is an illustration, not an analysis. Scores, actual waveform samples, feature overlays and causal cards continue to use backend results. Fixture and approximate-timing notices remain explicit.
+
+The 17 behavioral tests, module syntax, markup structure and asset routes pass. The reference URL could not be fetched, the Chrome connector is disconnected, and browser automation could not start due to Windows permissions. Visual matching, browser interactions and the Next.js shell build remain unverified.
 
 ### What actually works today
 
@@ -550,6 +561,7 @@ This section tracks every significant change to the project. Updated automatical
 
 | Date | What Changed | Why | Details |
 |---|---|---|---|
+| 2026-10-14 | Frontend and logo refreshed | Dark studio dashboard and supplied artwork integrated | Syntax, markup, asset routes and 17 behavioral tests pass; browser visual QA remains blocked |
 | 2026-10-12 | Runnable local prototype and complete revision guide added | Core/API, controlled fixtures, shared dashboard, tests and technical report implemented | See task.md for verification and unresolved real-data/environment work |
 | 2026-10-12 | Initial planning documents created | Starting the project | PRD, TDD, implementation strategy, task tracker, and this guide |
 | 2026-10-12 | Added file-by-file reading order guide | User asked for a sequential map of every file in the project | Section 0 — complete reading roadmap with 6 parts (A-F), ~30 files |

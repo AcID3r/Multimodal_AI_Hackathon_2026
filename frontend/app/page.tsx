@@ -11,5 +11,11 @@ export default function Home() {
     });
     return () => { cancelled = true; dispose?.(); };
   }, []);
-  return <main ref={host}><p style={{padding:32}}>Loading Cadence...</p></main>;
+  return <main ref={host}>
+    <div className="app-loading" role="status">
+      {/* A native image matches the dependency-free dashboard's original logo. */}
+      <img src="/cadence-logo.png" width="144" height="96" alt="Cadence logo" />
+      <p>Opening the speech lab...</p>
+    </div>
+  </main>;
 }
