@@ -1,0 +1,3 @@
+# Install in a separate Python environment; WhisperX owns its Torch dependencies.
+# Pin the installed model/package versions before reporting reproducibility.
+whisperx==3.8.6

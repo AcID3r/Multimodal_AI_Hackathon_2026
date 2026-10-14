@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+frontend/node_modules/
+frontend/.next/
+frontend/tsconfig.tsbuildinfo
+.env
+.env.local
+runtime/
+reports/
+dataset/speeches/
+!dataset/speeches/.gitkeep
+*.log
+.npm-cache/
+dataset/incoming/

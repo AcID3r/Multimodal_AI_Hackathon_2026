@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "speeches": [
+    {
+      "id": "demo_001",
+      "title": "Controlled fixture 1",
+      "speaker": "Harmonic signal generator",
+      "source": "Generated locally from original text",
+      "license": "CC0-1.0",
+      "kind": "synthetic_fixture",
+      "human_reviewed": false,
+      "duration_seconds": 7.214,
+      "audio_sha256": "084939e5ad62d7297ac0f03a0d0ee93ba7e6afcdee7585f1ec214af482f0c60a",
+      "path": "speeches/demo_001",
+      "variants": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "demo_002",
+      "title": "Controlled fixture 2",
+      "speaker": "Harmonic signal generator",
+      "source": "Generated locally from original text",
+      "license": "CC0-1.0",
+      "kind": "synthetic_fixture",
+      "human_reviewed": false,
+      "duration_seconds": 7.616,
+      "audio_sha256": "bf24075e3fde08fa055f533e03a56c825980307c094f7df2d983b47275c42341",
+      "path": "speeches/demo_002",
+      "variants": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "demo_003",
+      "title": "Controlled fixture 3",
+      "speaker": "Harmonic signal generator",
+      "source": "Generated locally from original text",
+      "license": "CC0-1.0",
+      "kind": "synthetic_fixture",
+      "human_reviewed": false,
+      "duration_seconds": 7.67,
+      "audio_sha256": "dbda52a2822bfe5314fe36207a4a6fe1b86f208e2bdddb40bf0c97fdf28d3fb4",
+      "path": "speeches/demo_003",
+      "variants": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "demo_004",
+      "title": "Controlled fixture 4",
+      "speaker": "Harmonic signal generator",
+      "source": "Generated locally from original text",
+      "license": "CC0-1.0",
+      "kind": "synthetic_fixture",
+      "human_reviewed": false,
+      "duration_seconds": 7.598,
+      "audio_sha256": "8d27db76100825f1e5d09319be9a31b8804f2420c63eda0bffe403c7ece308dd",
+      "path": "speeches/demo_004",
+      "variants": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "demo_005",
+      "title": "Controlled fixture 5",
+      "speaker": "Harmonic signal generator",
+      "source": "Generated locally from original text",
+      "license": "CC0-1.0",
+      "kind": "synthetic_fixture",
+      "human_reviewed": false,
+      "duration_seconds": 7.34,
+      "audio_sha256": "84d813bd22a3ff236ec2a83116b08c86f0fe5c2b686dcff2363e3d2a0c0612e5",
+      "path": "speeches/demo_005",
+      "variants": [
+        1,
+        2,
+        3
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "speeches": [{
+    "id": "speech_001", "title": "Actual speech title", "speaker": "Actual speaker",
+    "source": "Actual source attribution URL", "license": "Actual permission or license",
+    "audio_path": "incoming/speech_001.wav", "transcript_path": "incoming/speech_001.txt",
+    "alignment_path": "incoming/speech_001.alignment.json", "human_reviewed": false
+  }]
+}
